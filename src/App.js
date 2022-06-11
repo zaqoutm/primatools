@@ -13,34 +13,29 @@ function App() {
                             <div className={'logo'}>
                                 <Logo/>
                             </div>
-                            <div>
-                                <a href="#">Link</a>
-                            </div>
                         </div>
                     </div>
                 </header>
 
-                <div className={'centered-content'}>
-                    <div className={'latest-apps'}>
-                        <h1>Latest Apps</h1>
+                <div>
+                    <div className={'welcome'}>
+                        <div className="centered-content">
+                            <p>We are a software company, and we create</p>
+                        </div>
+                    </div>
+                    <div className={'services'}>
+                        services list
                     </div>
                 </div>
-                {/*<div>*/}
-                {/*    <h1>Retro</h1>*/}
-                {/*</div>*/}
+
+                {/**/}
+                <div className={'retro'}>
+                    <h1>Retro</h1>
+                </div>
                 {/*<div>*/}
                 {/*    <h1>Planning Poker</h1>*/}
                 {/*</div>*/}
-                <div className="centered-content">
-                    <div className={'welcome'}>
-                        <p>We are a software company, and we create</p>
-                    </div>
 
-                    <div>
-                        services list
-                    </div>
-
-                </div>
 
             </div>
 
