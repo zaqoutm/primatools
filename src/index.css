@@ -58,27 +58,17 @@ header {
 .welcome {
     padding: 220px 0;
     width: 100%;
-    background: #174cb4;
     position: relative;
     overflow: hidden;
 }
 
-.welcome:after {
-    position: absolute;
-    left: -12px;
-    bottom: -132px;
-    height: 162px;
-    width: 110vw;
-    background: white;
-    /*border: 2px deepskyblue solid;*/
-    transform: rotate(-6deg);
-    content: '';
+#space-video {
+    width: 100%;
 }
 
 .welcome p {
     max-width: 1000px;
-    color: white;
-    font-size: 50px;
+    font-size: 48px;
     font-family: monospace;
     font-weight: bold;
     margin: 0;

@@ -1,6 +1,15 @@
 import {ReactComponent as Logo} from './logo.svg'
+import space from './space.mp4'
+import {useEffect} from "react";
 
 function App() {
+
+    useEffect(() => {
+        // var vid = document.getElementById("space-video");
+        // vid.playbackRate = 0.4;
+
+    }, [])
+
     return (
         <div className={'app'}>
 
@@ -17,21 +26,22 @@ function App() {
                     </div>
                 </header>
 
-                <div>
-                    <div className={'welcome'}>
-                        <div className="centered-content">
-                            <p>We are a software company, and we create</p>
-                        </div>
-                    </div>
-                    <div className={'services'}>
-                        services list
+                <div className={'welcome'}>
+                    <div className="centered-content welcome-content">
+                        <p>Hello, We are a software company, and we create</p>
                     </div>
                 </div>
 
-                {/**/}
-                <div className={'retro'}>
-                    <h1>Retro</h1>
+                <video id="space-video" src={space} loop muted autoPlay playsInline/>
+
+                <div className={'services'}>
+                    services list
                 </div>
+
+                {/**/}
+                {/*<div className={'retro'}>*/}
+                {/*    <h1>Retro</h1>*/}
+                {/*</div>*/}
                 {/*<div>*/}
                 {/*    <h1>Planning Poker</h1>*/}
                 {/*</div>*/}
