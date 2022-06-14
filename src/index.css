@@ -64,6 +64,7 @@ header {
 
 #space-video {
     width: 100%;
+    background: #000;
 }
 
 .welcome p, .welcome .hello-text {
@@ -77,6 +78,7 @@ header {
 }
 
 .cursor1 span, .cursor2 span {
+    color: #ababab;
     font-size: 38px;
 }
 
@@ -102,11 +104,10 @@ header {
     position: absolute;
     top: -50px;
     left: 45%;
-    color: #0e43a4;
-    background-color: rgba(14, 67, 164, 0.04);
+    color: #56b1cc;
+    background-color: rgba(0, 165, 220, 0.04);
     border-radius: 4px;
-    padding: 4px 24px;
-    text-decoration: underline rgba(14, 67, 164, 0.4);
+    padding: 0 24px;
 }
 
 .services {
