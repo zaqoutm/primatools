@@ -6,7 +6,13 @@ import gsap from 'gsap'
 
 function App() {
 
+    const appsWeCreate = ['Web apps', 'Mobile apps']
+
     useEffect(() => {
+        gsap.timeline()
+        // .fromTo('.app', {opacity: 0}, {opacity: 0.2, duration: 0.9})
+        // .to('.app', {opacity: 1, y: 0, duration: .2})
+
         // var vid = document.getElementById("space-video");
         // vid.playbackRate = 0.4;
 
@@ -16,11 +22,28 @@ function App() {
             .to('.cursor1', {x: '94%', duration: 2.2})
             .to('.cursor1', {opacity: 0, duration: 0})
 
-        gsap.timeline()
-            .set('.cursor2', {opacity: 0, delay: 4})
-            .to('.cursor2', {x: '40%', duration: 1.4, opacity: 1})
+        let crsrTL = gsap.timeline()
+            .set('.cursor2', {opacity: 0})
+            .to('.cursor2', {delay: 4, x: '40%', duration: 1.4, opacity: 1})
             .fromTo('.cursor2', {opacity: 0}, {opacity: 1, repeat: 3})
-            .to('.cursor2', {opacity: .3})
+            .to('.cursor2', {opacity: 0})
+
+        // gsap.timeline()
+        //     .set('.welcome-apps-list', {opacity: 0, y: 20})
+        //     .to('.welcome-apps-list', {delay: 6, opacity: 1, y: 0})
+
+        gsap.timeline().set(['.item1', '.item2'], {opacity: 0.2, y: 38})
+
+        let appsTL = gsap.timeline({repeat: -1, repeatDelay: 0})
+        let item1TL = gsap.timeline()
+            .to('.item1', {y: 0, opacity: 1, duration: .2})
+            .to('.item1', {delay: 1, duration: .2, opacity: 0})
+        let item2TL = gsap.timeline()
+            .to('.item2', {y: 0, opacity: 1, duration: .2})
+            .to('.item2', {delay: 1, duration: .2, opacity: 0})
+        appsTL.add(item1TL)
+        appsTL.add(item2TL)
+        crsrTL.add(appsTL)
 
     }, [])
 
@@ -56,7 +79,20 @@ function App() {
                             <span>|</span>
                         </p>
 
+                        <div className={'welcome-apps-list'}>
+                            <p style={{opacity: 0}}>
+                                &#10;and&nbsp;we&nbsp;create
+                            </p>
+
+                            {/*    /!* loop on apps list *!/*/}
+                            {appsWeCreate.map((a, i) => <div key={a}
+                                                             className={`item item${i + 1}`}>
+                                <p>{a}</p>
+                            </div>)}
+                        </div>
+
                     </div>
+
                 </div>
 
                 <video id="space-video" src={space} loop muted autoPlay playsInline/>

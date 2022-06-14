@@ -93,6 +93,22 @@ header {
     width: 100%;
 }
 
+.welcome-apps-list {
+    display: flex;
+    position: relative;
+    /*border: 1px solid red;*/
+}
+
+.item {
+    position: absolute;
+    top: -33px;
+    left: 33%;
+    background: #0e43a4;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 24px;
+}
+
 .services {
     padding: 120px 0;
 }
