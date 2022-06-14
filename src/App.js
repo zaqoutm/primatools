@@ -1,12 +1,26 @@
 import {ReactComponent as Logo} from './logo.svg'
 import space from './space.mp4'
 import {useEffect} from "react";
+import {SplitChars, Tween} from "react-gsap";
+import gsap from 'gsap'
 
 function App() {
 
     useEffect(() => {
         // var vid = document.getElementById("space-video");
         // vid.playbackRate = 0.4;
+
+        gsap.timeline()
+            .set('.cursor1', {opacity: .2})
+            .fromTo('.cursor1', {opacity: 0}, {opacity: 1, repeat: 3})
+            .to('.cursor1', {x: '94%', duration: 2.2})
+            .to('.cursor1', {opacity: 0, duration: 0})
+
+        gsap.timeline()
+            .set('.cursor2', {opacity: 0, delay: 4})
+            .to('.cursor2', {x: '40%', duration: 1.4, opacity: 1})
+            .fromTo('.cursor2', {opacity: 0}, {opacity: 1, repeat: 3})
+            .to('.cursor2', {opacity: .3})
 
     }, [])
 
@@ -27,8 +41,21 @@ function App() {
                 </header>
 
                 <div className={'welcome'}>
-                    <div className="centered-content welcome-content">
-                        <p>Hello, We are a software company, and we create</p>
+                    <div className="centered-content relative">
+                        <Tween from={{opacity: 0}} stagger={.8}
+                               duration={3} delay={2}>
+                            <SplitChars wrapper={<span className={'hello-text'}/>}>
+                                Hello,&nbsp;We&nbsp;are&nbsp;a&nbsp;software&nbsp;company,&#10;and&nbsp;we&nbsp;create
+                            </SplitChars>
+                        </Tween>
+
+                        <p className={'cursor1'}>
+                            <span>|</span>
+                        </p>
+                        <p className={'cursor2'}>
+                            <span>|</span>
+                        </p>
+
                     </div>
                 </div>
 

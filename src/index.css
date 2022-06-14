@@ -56,7 +56,7 @@ header {
 }
 
 .welcome {
-    padding: 220px 0;
+    padding: 120px 0;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -66,12 +66,31 @@ header {
     width: 100%;
 }
 
-.welcome p {
+.welcome p, .welcome .hello-text {
     max-width: 1000px;
     font-size: 48px;
     font-family: monospace;
     font-weight: bold;
-    margin: 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.cursor1 span, .cursor2 span {
+    font-size: 38px;
+}
+
+.cursor1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.cursor2 {
+    position: absolute;
+    top: 50px;
+    width: 100%;
 }
 
 .services {
