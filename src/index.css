@@ -70,7 +70,6 @@ header {
     max-width: 1000px;
     font-size: 48px;
     font-family: monospace;
-    font-weight: bold;
 }
 
 .relative {
@@ -101,12 +100,13 @@ header {
 
 .item {
     position: absolute;
-    top: -33px;
-    left: 33%;
-    background: #0e43a4;
-    color: white;
+    top: -50px;
+    left: 45%;
+    color: #0e43a4;
+    background-color: rgba(14, 67, 164, 0.04);
     border-radius: 4px;
     padding: 4px 24px;
+    text-decoration: underline rgba(14, 67, 164, 0.4);
 }
 
 .services {

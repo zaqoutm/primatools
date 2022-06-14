@@ -6,7 +6,7 @@ import gsap from 'gsap'
 
 function App() {
 
-    const appsWeCreate = ['Web apps', 'Mobile apps']
+    const appsWeCreate = ['Web', 'Mobile']
 
     useEffect(() => {
         gsap.timeline()
@@ -24,15 +24,11 @@ function App() {
 
         let crsrTL = gsap.timeline()
             .set('.cursor2', {opacity: 0})
-            .to('.cursor2', {delay: 4, x: '40%', duration: 1.4, opacity: 1})
+            .to('.cursor2', {delay: 4, x: '52%', duration: 1.4, opacity: 1})
             .fromTo('.cursor2', {opacity: 0}, {opacity: 1, repeat: 3})
             .to('.cursor2', {opacity: 0})
 
-        // gsap.timeline()
-        //     .set('.welcome-apps-list', {opacity: 0, y: 20})
-        //     .to('.welcome-apps-list', {delay: 6, opacity: 1, y: 0})
-
-        gsap.timeline().set(['.item1', '.item2'], {opacity: 0.2, y: 38})
+        gsap.timeline().set(['.item1', '.item2'], {opacity: 0, y: 38})
 
         let appsTL = gsap.timeline({repeat: -1, repeatDelay: 0})
         let item1TL = gsap.timeline()
@@ -68,7 +64,8 @@ function App() {
                         <Tween from={{opacity: 0}} stagger={.8}
                                duration={3} delay={2}>
                             <SplitChars wrapper={<span className={'hello-text'}/>}>
-                                Hello,&nbsp;We&nbsp;are&nbsp;a&nbsp;software&nbsp;company,&#10;and&nbsp;we&nbsp;create
+                                Hello,&nbsp;We&nbsp;are&nbsp;a&nbsp;software&nbsp;company,
+                                &#10;and&nbsp;we&nbsp;create&nbsp;apps&nbsp;
                             </SplitChars>
                         </Tween>
 
@@ -80,15 +77,10 @@ function App() {
                         </p>
 
                         <div className={'welcome-apps-list'}>
-                            <p style={{opacity: 0}}>
-                                &#10;and&nbsp;we&nbsp;create
-                            </p>
-
-                            {/*    /!* loop on apps list *!/*/}
-                            {appsWeCreate.map((a, i) => <div key={a}
-                                                             className={`item item${i + 1}`}>
-                                <p>{a}</p>
-                            </div>)}
+                            {appsWeCreate.map((a, i) =>
+                                <div key={a} className={`item item${i + 1}`}>
+                                    <p>{a}</p>
+                                </div>)}
                         </div>
 
                     </div>
