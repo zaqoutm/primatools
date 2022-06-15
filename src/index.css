@@ -28,6 +28,31 @@ code {
     border: 1px solid red;
 }
 
+.colored-title, .colored-title-black, .colored-title-blue {
+    /*border: 1px solid deeppink;*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+}
+
+.colored-title-black {
+    background-image: linear-gradient(120deg, #000000 0%, #414040 51%, #000000 100%);
+}
+
+.colored-title {
+    /*background-image: linear-gradient(120deg, #ff7051 0%, #ff00f0 51%, #8e0fc0 100%);*/
+    background-image: linear-gradient(116deg, #1093ff -7%, #b000f6 100%);
+}
+
+.colored-title-blue {
+    background-image: linear-gradient(to right, #0095ff 0%, #12D8FA 51%, #0095ff 100%);
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
 /****************************************/
 
 .app {
@@ -60,11 +85,19 @@ header {
     width: 100%;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.space-video-container {
+    max-height: 500px;
+    overflow: hidden;
 }
 
 #space-video {
     width: 100%;
-    background: #000;
+    background-image: url("./space1.png");
+    background-position: center top;
 }
 
 .welcome p, .welcome .hello-text {
@@ -104,14 +137,35 @@ header {
     position: absolute;
     top: -50px;
     left: 45%;
-    color: #56b1cc;
-    background-color: rgba(0, 165, 220, 0.04);
+}
+
+.item p {
+    color: #00b2e5;
+    background-color: rgba(0, 0, 0, 0.04);
     border-radius: 4px;
     padding: 0 24px;
 }
 
-.services {
+.services-title {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+.services-list {
     padding: 120px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.service {
+    background-image: linear-gradient(to bottom, #fff -7%, rgba(0, 0, 0, 0.04) 100%);
+    border-radius: 4px;
+    padding: 4px;
+    width: 140px;
+    height: 140px;
 }
 
 .latest-apps {
@@ -144,6 +198,7 @@ footer {
 
 .footer-links h4 {
     margin-top: 0;
+    margin-bottom: 12px;
     color: #5b5b5b;
 }
 

@@ -25,8 +25,7 @@ function App() {
         let crsrTL = gsap.timeline()
             .set('.cursor2', {opacity: 0})
             .to('.cursor2', {delay: 4, x: '52%', duration: 1.4, opacity: 1})
-            .fromTo('.cursor2', {opacity: 0}, {opacity: 1, repeat: 3})
-            .to('.cursor2', {opacity: 0})
+            .to('.cursor2', {opacity: 0, scale: 2, x: '100%', duration: .4})
 
         gsap.timeline().set(['.item1', '.item2'], {opacity: 0, y: 38})
 
@@ -79,7 +78,7 @@ function App() {
                         <div className={'welcome-apps-list'}>
                             {appsWeCreate.map((a, i) =>
                                 <div key={a} className={`item item${i + 1}`}>
-                                    <p>{a}</p>
+                                    <span>for</span><p>{a}</p>
                                 </div>)}
                         </div>
 
@@ -87,10 +86,29 @@ function App() {
 
                 </div>
 
-                <video id="space-video" src={space} loop muted autoPlay playsInline/>
+                {/**/}
+                <div className="space-video-container">
+                    <video id="space-video" src={space} loop muted autoPlay playsInline/>
+                </div>
 
+                {/* Services */}
                 <div className={'services'}>
-                    services list
+                    <div className={'services-title'}>
+                        <h1 className={'colored-title'}>Services</h1>
+                    </div>
+
+                    <div className="services-list">
+                        <div className={'service'}>
+                            Service 1
+                        </div>
+                        <div className={'service'}>
+                            Service 2
+                        </div>
+                        <div className={'service'}>
+                            Service 3
+                        </div>
+                    </div>
+
                 </div>
 
                 {/**/}
