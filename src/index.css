@@ -40,8 +40,8 @@ code {
 }
 
 .colored-title {
-    /*background-image: linear-gradient(120deg, #ff7051 0%, #ff00f0 51%, #8e0fc0 100%);*/
-    background-image: linear-gradient(116deg, #1093ff -7%, #b000f6 100%);
+    background-image: linear-gradient(120deg, #ff7051 0%, #ff00f0 51%, #8e0fc0 100%);
+    /*background-image: linear-gradient(116deg, #1093ff -7%, #b000f6 100%);*/
 }
 
 .colored-title-blue {
@@ -51,6 +51,10 @@ code {
 .justify-center {
     display: flex;
     justify-content: center;
+}
+
+.relative {
+    position: relative;
 }
 
 /****************************************/
@@ -81,13 +85,47 @@ header {
 }
 
 .welcome {
-    padding: 120px 0;
+    padding: 50px 0;
     width: 100%;
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
 }
+
+.hello-text-wrapper {
+    margin-bottom: 12px;
+}
+
+.hello-text {
+    font-size: 48px;
+    font-family: monospace;
+}
+
+.welcome-apps-list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100px;
+    min-width: 400px;
+}
+
+.item {
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.item p {
+    color: #00b2e5;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 0 24px;
+    font-size: 48px;
+    font-family: monospace;
+}
+
 
 .space-video-container {
     max-height: 500px;
@@ -98,52 +136,6 @@ header {
     width: 100%;
     background-image: url("./space1.png");
     background-position: center top;
-}
-
-.welcome p, .welcome .hello-text {
-    max-width: 1000px;
-    font-size: 48px;
-    font-family: monospace;
-}
-
-.relative {
-    position: relative;
-}
-
-.cursor1 span, .cursor2 span {
-    color: #ababab;
-    font-size: 38px;
-}
-
-.cursor1 {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.cursor2 {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-}
-
-.welcome-apps-list {
-    display: flex;
-    position: relative;
-    /*border: 1px solid red;*/
-}
-
-.item {
-    position: absolute;
-    top: -50px;
-    left: 45%;
-}
-
-.item p {
-    color: #00b2e5;
-    background-color: rgba(0, 0, 0, 0.04);
-    border-radius: 4px;
-    padding: 0 24px;
 }
 
 .services-title {
