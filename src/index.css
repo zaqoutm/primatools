@@ -5,6 +5,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: #1D1D1F;
 }
 
 code {
@@ -179,7 +180,7 @@ footer {
 
 .footer-links-container {
     display: flex;
-    column-gap: 124px;
+    column-gap: 10%;
     padding: 24px;
 }
 
@@ -191,22 +192,23 @@ footer {
 .footer-links h4 {
     margin-top: 0;
     margin-bottom: 12px;
-    color: #5b5b5b;
 }
 
 .footer-links a {
     font-size: 12px;
     text-decoration: none;
-    color: #5b5b5b;
-    margin-bottom: 12px;
+    color: #1D1D1F;
+    /*border: 1px solid deepskyblue;*/
+    padding: 4px 0;
+    margin-bottom: 4px;
 }
 
 .footer-links a:hover {
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .footer-copy-right {
     font-size: 12px;
     background: #fff;
-    padding: 12px;
+    padding: 24px 12px;
 }
