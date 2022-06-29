@@ -8,6 +8,14 @@ body {
     color: #1D1D1F;
 }
 
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -41,7 +49,7 @@ code {
 }
 
 .colored-title {
-    background-image: linear-gradient(120deg, #ff7051 0%, #ff00f0 51%, #8e0fc0 100%);
+    background-image: linear-gradient(120deg, #8e0fc0 0%, #d563ff 51%, #8e0fc0 100%);
     /*background-image: linear-gradient(116deg, #1093ff -7%, #b000f6 100%);*/
 }
 
@@ -113,31 +121,33 @@ header {
 
 .welcome-apps-list {
     display: flex;
+    align-items: center;
     justify-content: center;
-    position: relative;
-    height: 100px;
-    min-width: 400px;
+    column-gap: 12px;
+    background: #000;
+    padding: 12px;
+}
+
+.welcome-apps-list h2 {
+    color: #fff;
+    font-size: 24px;
 }
 
 .item {
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    border-radius: 12px;
 }
 
 .item p {
-    color: #00b2e5;
-    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px dashed #fff;
     border-radius: 4px;
+    color: #fff;
     padding: 0 24px;
-    font-size: 48px;
+    font-size: 24px;
     font-family: monospace;
 }
 
-
 .space-video-container {
-    max-height: 500px;
+    max-height: 200px;
     overflow: hidden;
 }
 
@@ -147,6 +157,11 @@ header {
     background-position: center top;
 }
 
+/* SERVICES */
+.services {
+    padding: 120px 0;
+}
+
 .services-title {
     display: flex;
     justify-content: center;
@@ -154,7 +169,6 @@ header {
 }
 
 .services-list {
-    padding: 120px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,8 +176,11 @@ header {
 }
 
 .service {
-    background-image: linear-gradient(to bottom, #fff -7%, rgba(0, 0, 0, 0.04) 100%);
-    border-radius: 4px;
+    background-color: #f5f5f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
     padding: 4px;
     width: 140px;
     height: 140px;

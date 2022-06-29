@@ -1,8 +1,7 @@
 import {ReactComponent as Logo} from './logo.svg'
 import space from './space.mp4'
-import {useEffect} from "react";
-import {SplitChars, Tween} from "react-gsap";
-import gsap from 'gsap'
+import {useEffect} from 'react';
+import {SplitChars, Tween} from 'react-gsap';
 import iphone from './iphone.png'
 
 function App() {
@@ -10,24 +9,6 @@ function App() {
     const appsWeCreate = ['Web', 'Mobile']
 
     useEffect(() => {
-        // gsap.timeline()
-        // .fromTo('.app', {opacity: 0}, {opacity: 0.2, duration: 0.9})
-        // .to('.app', {opacity: 1, y: 0, duration: .2})
-
-        // var vid = document.getElementById("space-video");
-        // vid.playbackRate = 0.4;
-        gsap.timeline().set(['.item1', '.item2'], {opacity: 0, y: 58})
-
-        let appsTL = gsap.timeline({delay: 4, repeat: -1, repeatDelay: 0})
-        let item1TL = gsap.timeline()
-            .to('.item1', {y: 0, opacity: 1, duration: .2})
-            .to('.item1', {delay: 1, duration: .2, opacity: 0})
-        let item2TL = gsap.timeline()
-            .to('.item2', {y: 0, opacity: 1, duration: .2})
-            .to('.item2', {delay: 1, duration: .2, opacity: 0})
-        appsTL.add(item1TL)
-        appsTL.add(item2TL)
-
     }, [])
 
     return (
@@ -50,59 +31,63 @@ function App() {
                     <div className="centered-content relative">
 
                         <div className={'hello-text-wrapper'}>
+                            <Tween from={{y: -24, opacity: 0, duration: .4}} delay={.2}>
+                                <h1>Hello</h1>
+                            </Tween>
                             <div>
-                                <Tween from={{opacity: 0}} stagger={.8} duration={.2} delay={1}>
-                                    <SplitChars wrapper={<span className={'hello-text'}/>}>
-                                        Hello,
-                                    </SplitChars>
-                                </Tween>
-                            </div>
-                            <div>
-                                <Tween from={{opacity: 0}} stagger={.8} duration={.4} delay={2}>
+                                <Tween from={{opacity: 0}} stagger={.8} duration={.5} delay={.5}>
                                     <SplitChars wrapper={<span className={'hello-text'} style={{fontSize: 28}}/>}>
                                         We&nbsp;are&nbsp;a&nbsp;software&nbsp;company
                                     </SplitChars>
                                 </Tween>
                             </div>
                             <div>
-                                <Tween from={{opacity: 0}} stagger={.8} duration={.4} delay={3}>
+                                <Tween from={{opacity: 0}} stagger={.8} duration={.3} delay={1.4}>
                                     <SplitChars wrapper={<span className={'hello-text'} style={{fontSize: 28}}/>}>
                                         &#13;and&nbsp;we&nbsp;create&nbsp;apps&nbsp;
                                     </SplitChars>
                                 </Tween>
                             </div>
                         </div>
-
-                        <div className={'welcome-apps-list'}>
-                            {appsWeCreate.map((a, i) =>
-                                <div key={a} className={`item item${i + 1}`}>
-                                    <span>for</span><p>{a}</p>
-                                </div>)}
-                        </div>
                     </div>
-
                 </div>
 
                 {/**/}
-                <div className="space-video-container">
-                    <video id="space-video" src={space} loop muted autoPlay playsInline/>
-                </div>
+                <Tween from={{y: 56, opacity: 0, duration: .4}} to={{opacity: 1, y: 0}} delay={2}>
+                    <div className="space-video-container">
+
+                        <div className={'welcome-apps-list'}>
+                            <Tween delay={2} from={{y: 256, opacity: 0, duration: .8}} stagger={.2}>
+                                {appsWeCreate.map((a, i) =>
+                                    <div key={a} className={`item item${i + 1}`}>
+                                        <p>{a}</p>
+                                    </div>)}
+                            </Tween>
+                        </div>
+
+                        <video id="space-video" src={space} loop muted autoPlay playsInline/>
+                    </div>
+                </Tween>
 
                 {/**/}
                 <div className={'app-preview'}>
-                    <div className={'app-description'}>
-                        <div>
-                            <h1>Retro</h1>
-                            <p className={''}>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor eum libero quasi
-                                saepe sint ullam! Eum id minima perferendis quam quasi quibusdam totam voluptates? Et
-                                similique, voluptatem. Illum, libero?
-                            </p>
+                    <Tween from={{y: 56, opacity: 0, duration: .4}} to={{opacity: 1, y: 0}} delay={3} stagger={.4}>
+                        <div className={'app-description'}>
+                            <div>
+                                <h1>Retro</h1>
+                                <p className={''}>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor eum libero
+                                    quasi
+                                    saepe sint ullam! Eum id minima perferendis quam quasi quibusdam totam voluptates?
+                                    Et
+                                    similique, voluptatem. Illum, libero?
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className={'app-screenshots'}>
-                        <img src={iphone} alt=""/>
-                    </div>
+                        <div className={'app-screenshots'}>
+                            <img src={iphone} alt=""/>
+                        </div>
+                    </Tween>
                 </div>
 
                 <div className={'app-preview jumbotron'}>
@@ -110,8 +95,10 @@ function App() {
                         <div>
                             <h1>Planning Poker</h1>
                             <p className={''}>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor eum libero quasi
-                                saepe sint ullam! Eum id minima perferendis quam quasi quibusdam totam voluptates? Et
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor eum libero
+                                quasi
+                                saepe sint ullam! Eum id minima perferendis quam quasi quibusdam totam voluptates?
+                                Et
                                 similique, voluptatem. Illum, libero?
                             </p>
                         </div>
@@ -125,18 +112,19 @@ function App() {
                 {/* Services */}
                 <div className={'services'}>
                     <div className={'services-title'}>
-                        <h1 className={'colored-title'}>Services</h1>
+                        <span className={'colored-title-black'}>other</span><h1
+                        className={'colored-title'}>Services</h1>
                     </div>
 
                     <div className="services-list">
                         <div className={'service'}>
-                            Service 1
+                            1
                         </div>
                         <div className={'service'}>
-                            Service 2
+                            2
                         </div>
                         <div className={'service'}>
-                            Service 3
+                            3
                         </div>
                     </div>
 
