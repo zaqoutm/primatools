@@ -3,6 +3,7 @@ import space from './space.mp4'
 import {useEffect} from "react";
 import {SplitChars, Tween} from "react-gsap";
 import gsap from 'gsap'
+import iphone from './iphone.png'
 
 function App() {
 
@@ -87,6 +88,40 @@ function App() {
                     <video id="space-video" src={space} loop muted autoPlay playsInline/>
                 </div>
 
+                {/**/}
+                <div className={'app-preview'}>
+                    <div className={'app-description'}>
+                        <div>
+                            <h1>Retro</h1>
+                            <p className={''}>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor eum libero quasi
+                                saepe sint ullam! Eum id minima perferendis quam quasi quibusdam totam voluptates? Et
+                                similique, voluptatem. Illum, libero?
+                            </p>
+                        </div>
+                    </div>
+                    <div className={'app-screenshots'}>
+                        <img src={iphone} alt=""/>
+                    </div>
+                </div>
+
+                <div className={'app-preview jumbotron'}>
+                    <div className={'app-description order2'}>
+                        <div>
+                            <h1>Planning Poker</h1>
+                            <p className={''}>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor eum libero quasi
+                                saepe sint ullam! Eum id minima perferendis quam quasi quibusdam totam voluptates? Et
+                                similique, voluptatem. Illum, libero?
+                            </p>
+                        </div>
+                    </div>
+                    <div className={'app-screenshots'}>
+                        <img src={iphone} alt=""/>
+                    </div>
+                </div>
+
+
                 {/* Services */}
                 <div className={'services'}>
                     <div className={'services-title'}>
@@ -106,15 +141,6 @@ function App() {
                     </div>
 
                 </div>
-
-                {/**/}
-                {/*<div className={'retro'}>*/}
-                {/*    <h1>Retro</h1>*/}
-                {/*</div>*/}
-                {/*<div>*/}
-                {/*    <h1>Planning Poker</h1>*/}
-                {/*</div>*/}
-
 
             </div>
 
