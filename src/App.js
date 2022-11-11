@@ -33,8 +33,6 @@ function App() {
             }
         }
 
-        console.log(splashIsLoading)
-
     }, [splashIsLoading])
 
     if (splashIsLoading) return (<div/>)
@@ -58,50 +56,54 @@ function App() {
                 {/**/}
                 {/* HEADER */}
                 {/**/}
-                <header className={`${addShadowToHeader ? 'shadow-header' : ''}`}>
-                    <div className='header-content'>
-                        <Tween from={{opacity: 0, y: -24, delay: 2.2}} duration={.4}>
-                            <div className='header-content-left'>
-                                <div className={'logo'}>
-                                    <Logo/>
+                <Tween from={{y: -24}} duration={2}>
+                    <header className={`${addShadowToHeader ? 'shadow-header' : ''}`}>
+                        <div className='header-content'>
+                            <Tween from={{opacity: 0, y: -24, delay: 2.2}} duration={.4}>
+                                <div className='header-content-left'>
+                                    <div className={'logo'}>
+                                        <Logo/>
+                                    </div>
                                 </div>
-                            </div>
-                        </Tween>
-                        <Tween from={{opacity: 0, y: 24, delay: 2.2}} duration={.4}>
-                            <div className={'header-content-right'}>
-                                <a href='#'>Services</a>
-                                <a href='#'>Contact</a>
-                                <div className={'header-button'}><CiDark/></div>
-                                <div className={'header-button'}><HiOutlineMenuAlt4/></div>
-                            </div>
-                        </Tween>
-                    </div>
-                </header>
-
-                <div className={'welcome-section'}>
-                    <div className='centered-content relative'>
-
-                        <div className={'hello-text-wrapper'}>
-                            <Tween from={{y: -24, opacity: 0, duration: .4}} delay={.2}>
-                                <h1>Hello</h1>
                             </Tween>
-                            <div>
-                                <Tween from={{opacity: 0}} stagger={.8} duration={.5} delay={.5}>
-                                    <SplitChars wrapper={<span className={'hello-text'} style={{fontSize: 28}}/>}>
-                                        We&nbsp;are&nbsp;a&nbsp;software&nbsp;company
-                                    </SplitChars>
+                            <Tween from={{opacity: 0, y: 24, delay: 2.2}} duration={.4}>
+                                <div className={'header-content-right'}>
+                                    <a href='#'>Services</a>
+                                    <a href='#'>Contact</a>
+                                    <div className={'header-button'}><CiDark/></div>
+                                    <div className={'header-button'}><HiOutlineMenuAlt4/></div>
+                                </div>
+                            </Tween>
+                        </div>
+                    </header>
+                </Tween>
+
+                <Tween from={{y: -56, zIndex: 2, delay: 2}} duration={1}>
+                    <div className={'welcome-section'}>
+                        <div className='centered-content relative'>
+
+                            <div className={'hello-text-wrapper'}>
+                                <Tween from={{y: 124, opacity: 0, duration: .4}} delay={.2}>
+                                    <h1>Hello</h1>
                                 </Tween>
-                            </div>
-                            <div>
-                                <Tween from={{opacity: 0}} stagger={.8} duration={.3} delay={1.4}>
-                                    <SplitChars wrapper={<span className={'hello-text'} style={{fontSize: 28}}/>}>
-                                        &#13;and&nbsp;we&nbsp;create&nbsp;apps&nbsp;
-                                    </SplitChars>
-                                </Tween>
+                                <div>
+                                    <Tween from={{opacity: 0}} stagger={.8} duration={.5} delay={.5}>
+                                        <SplitChars wrapper={<span className={'hello-text'} style={{fontSize: 28}}/>}>
+                                            We&nbsp;are&nbsp;a&nbsp;software&nbsp;company
+                                        </SplitChars>
+                                    </Tween>
+                                </div>
+                                <div>
+                                    <Tween from={{opacity: 0}} stagger={.8} duration={.3} delay={1.4}>
+                                        <SplitChars wrapper={<span className={'hello-text'} style={{fontSize: 28}}/>}>
+                                            &#13;and&nbsp;we&nbsp;create&nbsp;apps&nbsp;
+                                        </SplitChars>
+                                    </Tween>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </Tween>
 
                 {/**/
                 }
@@ -109,7 +111,8 @@ function App() {
                 {/**/
                 }
                 <div className={'app-preview'}>
-                    <Tween from={{y: 56, opacity: 0, duration: .4}} to={{opacity: 1, y: 0}} delay={3} stagger={.4}>
+                    <Tween from={{y: 56, opacity: 0, duration: .2}} to={{opacity: 1, y: 0}} delay={3.5} duration={.5}
+                           stagger={.2}>
                         <div className={'app-description'}>
                             <div>
                                 <h1>Retro</h1>
@@ -130,16 +133,14 @@ function App() {
                     </Tween>
                 </div>
 
-                <div className={'app-preview jumbotron'}>
+                <div className={'app-preview'}>
                     <div className={'app-description order2'}>
                         <div>
                             <h1>Planning Poker</h1>
                             <p className={''}>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor eum libero
-                                quasi
-                                saepe sint ullam! Eum id minima perferendis quam quasi quibusdam totam voluptates?
-                                Et
-                                similique, voluptatem. Illum, libero?
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi asperiores
+                                atque beatae commodi consectetur delectus dicta doloribus fugiat illo in modi molestias,
+                                nam necessitatibus omnis praesentium sint vitae voluptatum?
                             </p>
                         </div>
                     </div>

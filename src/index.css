@@ -189,11 +189,12 @@ code {
 /* APPS PREVIEW*/
 .app-preview {
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /**/
 .app-description {
-    border-bottom: 4px solid #6e6e73;
     min-height: 100%;
     width: 100%;
     display: flex;
@@ -203,10 +204,13 @@ code {
 }
 
 .app-description p {
-    max-width: 500px;
+    margin-top: 12px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.02);
+    padding: 24px;
+    transform: rotate(-1deg);
     color: #6e6e73;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 22px;
     line-height: 1.2;
 }
 
