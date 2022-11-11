@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="utf-8"/>
+    <link href="%PUBLIC_URL%/favicon.ico" rel="icon"/>
+    <link href="splash.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <!--    <meta name="description" content=""/>-->
     <!--    <meta name="keywords" content=""/>-->
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="%PUBLIC_URL%/logo192.png" rel="apple-touch-icon"/>
+    <link href="%PUBLIC_URL%/manifest.json" rel="manifest"/>
     <title>Prima.Tools.LLC</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+</head>
+
+<!--<body>-->
+<body class="welcome">
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            document.body.classList.remove('welcome')
+        }, 3300)
+    });
+</script>
+
+<!-- app -->
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+
+<span class="splash" id="splash-overlay"></span>
+<span class="z-depth-4" id="welcome"></span>
+
+<!---->
+<div class="fixed-action-btn">
+</div>
+
+</body>
 </html>
