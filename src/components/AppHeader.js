@@ -6,17 +6,21 @@ import {HiOutlineMenuAlt4} from "react-icons/hi";
 
 const AppHeader = ({addShadowToHeader}) => {
     return (
-        <Tween from={{y: -24}} duration={2}>
-            <header className={`${addShadowToHeader ? 'shadow-header' : ''}`}>
+        <Tween
+            from={{backgroundColor: '#009dff'}}
+            to={{backgroundColor: '#fff', delay: 3}}
+            duration={.4}
+        >
+            <header className={`${addShadowToHeader ? 'shadow-header normal-height' : ''}`}>
                 <div className='header-content'>
-                    <Tween from={{opacity: 0, y: -24, delay: 2.2}} duration={.4}>
-                        <div className='header-content-left'>
+                    <div className='header-content-left'>
+                        <Tween from={{opacity: 0, x: 124, delay: 3}} duration={.3}>
                             <div className={'logo'}>
                                 <Logo/>
                             </div>
-                        </div>
-                    </Tween>
-                    <Tween from={{opacity: 0, y: 24, delay: 2.2}} duration={.4}>
+                        </Tween>
+                    </div>
+                    <Tween from={{opacity: 0, x: -124, delay: 3}} duration={.4}>
                         <div className={'header-content-right'}>
                             <a href='#'>Services</a>
                             <a href='#'>Contact</a>

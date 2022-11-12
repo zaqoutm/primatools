@@ -14,11 +14,11 @@ function App() {
     useEffect(() => {
         setTimeout(() => {
             setSplashIsLoading(false)
-        }, 3300)
+        }, 3000)
 
         window.onscroll = () => {
             let y = window.scrollY
-            if (y > 150) {
+            if (y > 250) {
                 setAddShadowToHeader(true)
                 setShowTopButton(true)
             } else {

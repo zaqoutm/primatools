@@ -5,8 +5,8 @@
     <link href="%PUBLIC_URL%/favicon.ico" rel="icon"/>
     <link href="splash.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <!--    <meta name="description" content=""/>-->
-    <!--    <meta name="keywords" content=""/>-->
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
     <link href="%PUBLIC_URL%/logo192.png" rel="apple-touch-icon"/>
     <link href="%PUBLIC_URL%/manifest.json" rel="manifest"/>
     <title>Prima.Tools.LLC</title>
@@ -18,7 +18,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             document.body.classList.remove('welcome')
-        }, 3300)
+        }, 3000)
     });
 </script>
 
@@ -26,12 +26,9 @@
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
 
-<span class="splash" id="splash-overlay"></span>
-<span class="z-depth-4" id="welcome"></span>
-
-<!---->
-<div class="fixed-action-btn">
-</div>
+<!-- splash -->
+<span class="splash"></span>
+<span id="welcome"></span>
 
 </body>
 </html>
