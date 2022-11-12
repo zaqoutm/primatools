@@ -7,9 +7,7 @@ body {
     margin: 0;
     color: #1D1D1F;
     font-size: 15px;
-}
-
-.app {
+    overflow-x: hidden;
 }
 
 h1 {
