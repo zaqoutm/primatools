@@ -62,11 +62,10 @@ header {
 
 .header-content-right a:hover {
     opacity: 1;
+    background-color: rgba(0, 0, 0, 0.04);
 }
 
 .header-button {
-    border: 1px solid #f1f1f1;
-    background: #fafafa;
     height: 24px;
     width: 24px;
     display: flex;
@@ -78,7 +77,7 @@ header {
 }
 
 .header-button:hover {
-    background: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.04);
 }
 
 .header-button svg {
