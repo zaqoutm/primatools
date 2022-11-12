@@ -1,13 +1,11 @@
 .welcome-section {
-    /*background-image: linear-gradient(120deg, #fff, #000);*/
-    padding: 50px 0;
     width: 100%;
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
-    /*border: 1px solid dodgerblue;*/
+    align-items: flex-start;
+    padding-top: 120px;
 }
 
 .hello-text-wrapper {
@@ -15,16 +13,17 @@
     /*padding: 24px;*/
 }
 
-.hello-text {
-    font-size: 22px;
+.hello-title {
+    font-size: 162px;
     font-weight: 500;
+}
 
+.hello-text {
+    font-size: 42px;
     /*background: #000;*/
-    /*color: #00ff00;*/
 }
 
 .hello-text-create-apps {
     display: flex;
-    column-gap: 4px;
-    color: black;
+    column-gap: 8px;
 }

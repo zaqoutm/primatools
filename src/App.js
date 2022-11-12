@@ -18,7 +18,7 @@ function App() {
 
         window.onscroll = () => {
             let y = window.scrollY
-            if (y > 250) {
+            if (y > 450) {
                 setAddShadowToHeader(true)
                 setShowTopButton(true)
             } else {
