@@ -5,13 +5,14 @@ import {CiDark} from "react-icons/ci";
 import {HiOutlineMenuAlt4} from "react-icons/hi";
 
 const AppHeader = ({addShadowToHeader}) => {
+
     return (
         <Tween
             from={{backgroundColor: '#009dff'}}
             to={{backgroundColor: '#fff', delay: 3}}
             duration={.4}
         >
-            <header className={`${addShadowToHeader ? 'shadow-header normal-height' : ''}`}>
+            <header className={`${addShadowToHeader ? 'shadow-header' : ''}`}>
                 <div className='header-content'>
                     <div className='header-content-left'>
                         <Tween from={{opacity: 0, x: 124, delay: 3}} duration={.3}>

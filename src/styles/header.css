@@ -3,11 +3,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
-    transition: height 200ms ease-in-out;
-}
-
-.normal-height {
-    height: 54px;
+    transition: box-shadow 300ms ease-in-out;
 }
 
 .go-top-button {
