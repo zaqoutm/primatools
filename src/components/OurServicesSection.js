@@ -2,10 +2,10 @@ import React from 'react';
 
 const OurServicesSection = () => {
     return (
-        <div className={'services'} id={'services-section'}>
+        <div className={'services'} id={'Services'}>
             <div className={'services-title'}>
                 <span className={'colored-title-black'}>other</span><h1
-                className={'colored-title'}>Services</h1>
+                className={'colored-title-blue'}>Services</h1>
             </div>
 
             <div className='services-list'>

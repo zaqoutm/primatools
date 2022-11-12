@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import './styles/hello.css';
+import './styles/our-apps.css';
 import './styles/services.css';
 import './styles/phone.css';
 

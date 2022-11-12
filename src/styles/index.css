@@ -47,16 +47,16 @@ code {
 }
 
 .colored-title-black {
-    background-image: linear-gradient(120deg, #000000 0%, #414040 51%, #000000 100%);
+    background-image: linear-gradient(120deg, #000000 0%, #414040 51%);
 }
 
 .colored-title {
-    background-image: linear-gradient(120deg, #8e0fc0 0%, #d563ff 51%, #8e0fc0 100%);
+    background-image: linear-gradient(120deg, #8e0fc0 0%, #b154d5 100%);
     /*background-image: linear-gradient(116deg, #1093ff -7%, #b000f6 100%);*/
 }
 
 .colored-title-blue {
-    background-image: linear-gradient(to right, #0095ff 0%, #12D8FA 51%, #0095ff 100%);
+    background-image: linear-gradient(to right, #0095ff 0%, #55b3f6 100%);
 }
 
 .justify-center {
@@ -87,51 +87,6 @@ code {
 
 .app-content {
     flex-grow: 1;
-}
-
-/* SERVICES */
-
-/**/
-/**/
-/* APPS PREVIEW*/
-.app-preview {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/**/
-.app-description {
-    min-height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.app-description p {
-    margin-top: 12px;
-    border-radius: 12px;
-    background: rgba(0, 0, 0, 0.02);
-    padding: 24px;
-    transform: rotate(-1deg);
-    color: #6e6e73;
-    font-size: 22px;
-    line-height: 1.2;
-}
-
-.app-screenshots {
-    /*border: 1px solid tomato;*/
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.app-screenshots img {
-    max-height: 500px;
-    min-height: 400px;
-    margin: 24px 0;
 }
 
 /******************************/

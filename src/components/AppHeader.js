@@ -40,15 +40,15 @@ const AppHeader = ({addShadowToHeader}) => {
             <div className='header-content'>
                 <div className='header-content-left'>
                     <Tween from={{opacity: 0, x: 124, delay: 3}} duration={.3}>
-                        <div className={'logo'}>
+                        <a className={'logo'} href={'/'}>
                             {isDarkMode ? <LogoDark/> : <Logo/>}
-                        </div>
+                        </a>
                     </Tween>
                 </div>
                 <Tween from={{opacity: 0, x: -124, delay: 3}} duration={.4}>
                     <div className={'header-content-right'}>
-                        <a href='#' style={{color: isDarkMode ? '#fff' : '#000'}}>Services</a>
-                        <a href='#' style={{color: isDarkMode ? '#fff' : '#000'}}>Contact</a>
+                        <a href='#Services' style={{color: isDarkMode ? '#fff' : '#000'}}>Services</a>
+                        <a href='#Contact' style={{color: isDarkMode ? '#fff' : '#000'}}>Contact</a>
                         <div onClick={changeColorsMode} className={'header-button'}>
                             {isDarkMode ? <BsFillSunFill color={'#fff'}/> : <CiDark/>}
                         </div>
