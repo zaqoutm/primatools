@@ -1,6 +1,6 @@
 import React from 'react';
 import {Tween} from "react-gsap";
-import iphone from "../statics/iphone.png";
+import iphone from "../photos/iphone.png";
 
 const OurAppsSection = () => {
     return (

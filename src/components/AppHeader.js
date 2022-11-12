@@ -1,6 +1,6 @@
 import React from 'react';
 import {Tween} from "react-gsap";
-import {ReactComponent as Logo} from "../statics/logo.svg";
+import {ReactComponent as Logo} from "../photos/logo.svg";
 import {CiDark} from "react-icons/ci";
 import {HiOutlineMenuAlt4} from "react-icons/hi";
 
