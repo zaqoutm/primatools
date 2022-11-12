@@ -35,7 +35,7 @@ const HelloSection = () => {
                             <Tween from={{opacity: 0, x: 22, rotate: -2}}
                                    to={{opacity: 1, x: 0, rotate: 0}}
                                    duration={.2} delay={2.4}>
-                                <span style={{fontWeight: 500}}>Apps</span>
+                                <span style={{fontWeight: 500}}>Apps.</span>
                             </Tween>
                         </div>
 
